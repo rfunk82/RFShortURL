@@ -7,9 +7,14 @@
 //
 
 #import "ViewController.h"
+#import "RFShortURL.h"
 
 @interface ViewController ()
+@property (strong, nonatomic) IBOutlet UITextField *websiteTextfield;
+@property (strong, nonatomic) IBOutlet UILabel *displayShortUrl;
+@property (strong, nonatomic) RFShortURL *smallUrl;
 
+- (IBAction)goPressed:(id)sender;
 @end
 
 @implementation ViewController
@@ -18,6 +23,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.smallUrl = [[ RFShortURL alloc] init];
+    [self.smallUrl setDelegate:self];
+    
+
+}
+
+-(void)receivedUrl:(NSString *)url
+{
+    self.displayShortUrl.text = url;
 }
 
 - (void)didReceiveMemoryWarning
@@ -26,4 +41,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)goPressed:(id)sender {
+    [self.smallUrl shortURL:self.websiteTextfield.text];
+}
 @end

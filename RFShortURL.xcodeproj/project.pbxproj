@@ -21,6 +21,7 @@
 		C74CCC0F184CF61A00D23667 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C74CCBF1184CF61A00D23667 /* UIKit.framework */; };
 		C74CCC17184CF61A00D23667 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C74CCC15184CF61A00D23667 /* InfoPlist.strings */; };
 		C74CCC19184CF61A00D23667 /* RFShortURLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C74CCC18184CF61A00D23667 /* RFShortURLTests.m */; };
+		C74CCC24184CFC2D00D23667 /* RFShortURL.m in Sources */ = {isa = PBXBuildFile; fileRef = C74CCC23184CFC2D00D23667 /* RFShortURL.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		C74CCC14184CF61A00D23667 /* RFShortURLTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RFShortURLTests-Info.plist"; sourceTree = "<group>"; };
 		C74CCC16184CF61A00D23667 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C74CCC18184CF61A00D23667 /* RFShortURLTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RFShortURLTests.m; sourceTree = "<group>"; };
+		C74CCC22184CFC2D00D23667 /* RFShortURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RFShortURL.h; path = RFShortURL/RFShortURL.h; sourceTree = "<group>"; };
+		C74CCC23184CFC2D00D23667 /* RFShortURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RFShortURL.m; path = RFShortURL/RFShortURL.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				C74CCBFF184CF61A00D23667 /* Main.storyboard */,
 				C74CCC02184CF61A00D23667 /* ViewController.h */,
 				C74CCC03184CF61A00D23667 /* ViewController.m */,
+				C74CCC22184CFC2D00D23667 /* RFShortURL.h */,
+				C74CCC23184CFC2D00D23667 /* RFShortURL.m */,
 				C74CCC05184CF61A00D23667 /* Images.xcassets */,
 				C74CCBF4184CF61A00D23667 /* Supporting Files */,
 			);
@@ -251,6 +256,7 @@
 			files = (
 				C74CCC04184CF61A00D23667 /* ViewController.m in Sources */,
 				C74CCBFE184CF61A00D23667 /* AppDelegate.m in Sources */,
+				C74CCC24184CFC2D00D23667 /* RFShortURL.m in Sources */,
 				C74CCBFA184CF61A00D23667 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +466,7 @@
 				C74CCC1E184CF61A00D23667 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C74CCC1F184CF61A00D23667 /* Build configuration list for PBXNativeTarget "RFShortURLTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +475,7 @@
 				C74CCC21184CF61A00D23667 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
