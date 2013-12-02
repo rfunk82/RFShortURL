@@ -12,6 +12,7 @@ Service provided by http://tinyurl.com
 3. Create an instance of RFShortURL and set yourself as the delegate, then just listen for a response using the delegate method receivedUrl:
 
 Ex:
+
      self.smallUrl = [[ RFShortURL alloc] init];
      [self.smallUrl setDelegate:self];
      [self.smallUrl shortURL:@"www.cnn.com"];
