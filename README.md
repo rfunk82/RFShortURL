@@ -8,7 +8,7 @@ Service provided by http://tinyurl.com
 ## How To Get Started
 
 1. Download RFShortURL
-2. #import "RFShortURL.h"
+2. `#import "RFShortURL.h"`
 3. Create an instance of RFShortURL and set yourself as the delegate, then just listen for a response using the delegate method receivedUrl:
 
 Ex:
