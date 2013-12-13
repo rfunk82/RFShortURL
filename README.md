@@ -19,10 +19,11 @@ Ex:
      
      Then we just listen:
      
-     -(void)receivedUrl:(NSString *)url
-    {
-          NSLog(@"%@",url);
-    }
+     -(void)receivedUrl:(NSString *)url fromOriginalUrl:(NSString *)originalUrl
+     {
+          self.displayShortUrl.text = url;
+          NSLog(@"Original URL: %@ Received Short URL: %@", originalUrl,url);
+     }
     
     
 
