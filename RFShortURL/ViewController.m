@@ -30,9 +30,11 @@
 
 }
 
--(void)receivedUrl:(NSString *)url
+-(void)receivedUrl:(NSString *)url fromOriginalUrl:(NSString *)originalUrl
 {
     self.displayShortUrl.text = url;
+    
+    NSLog(@"Original URL: %@ Received Short URL: %@", originalUrl,url);
 }
 
 - (void)didReceiveMemoryWarning

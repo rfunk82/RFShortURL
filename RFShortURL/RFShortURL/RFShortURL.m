@@ -10,11 +10,14 @@
 
 
 @implementation RFShortURL {
-    NSURLConnection    *connection;
-    NSMutableData     *receivedData;
+    NSURLConnection     *connection;
+    NSMutableData       *receivedData;
+    NSString            *originalUrl;
 }
 
 -(void)shortURL:(NSString *)providedUrl {
+    
+    originalUrl = providedUrl;
     
     NSString *fixedProvidedUrl = providedUrl;
     
@@ -60,8 +63,8 @@ didReceiveResponse:(NSURLResponse*)response;
 - (void)connectionDidFinishLoading:(NSURLConnection*)connection
 {
     NSString* url = [[NSString alloc] initWithData:receivedData encoding:NSASCIIStringEncoding];
-    if ([[self delegate] respondsToSelector:@selector(receivedUrl:)]) {
-        [[self delegate] receivedUrl:url];
+    if ([[self delegate] respondsToSelector:@selector(receivedUrl:fromOriginalUrl:)]) {
+        [[self delegate] receivedUrl:url fromOriginalUrl:originalUrl];
     }
 }
 

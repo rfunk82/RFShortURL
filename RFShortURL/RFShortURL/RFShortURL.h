@@ -17,6 +17,6 @@
 
 @protocol RFShortURLDelegate <NSObject>
 
--(void)receivedUrl:(NSString *)url;
+-(void)receivedUrl:(NSString *)url fromOriginalUrl:(NSString *)originalUrl;
 
 @end
